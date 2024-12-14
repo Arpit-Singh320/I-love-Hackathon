@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airport Lost Luggage Tracker</title>
+  <link rel="stylesheet" href="/Hackathon Lost and Found/styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Airport Lost Luggage Tracker</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#report-item">Report Luggage</a>
+        <a href="#search-item">Search Luggage</a>
+        <a href="#qr-code-section">QR Code</a>
+        <a href="#email-notification">Notifications</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h2>Track Your Lost Luggage with Ease</h2>
+        <p>A secure decentralized platform for reporting and recovering lost luggage at airports.</p>
+        <a href="#report-item" class="cta-button">Report Lost Luggage</a>
+      </div>
+    </section>
+
+    <!-- Report Section -->
+    <section id="report-item">
+      <h2>Report Lost or Found Luggage</h2>
+      <p class="section-description">Fill in the details below to report your lost or found luggage.</p>
+      <form id="luggage-form" class="form">
+        <label for="tag-number">Luggage Tag Number:</label>
+        <input type="text" id="tag-number" placeholder="e.g., LAX12345" required>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" placeholder="e.g., Black Samsonite suitcase" required>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" placeholder="e.g., Black" required>
+
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" placeholder="e.g., Samsonite" required>
+
+        <label for="item-image">Luggage Image URL:</label>
+        <input type="url" id="item-image" placeholder="e.g., https://imageurl.com/luggage.jpg" required>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+      <div class="response-message" id="report-response"></div>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-item">
+      <h2>Search Luggage</h2>
+      <p class="section-description">Find reported luggage by searching attributes like tag number or description.</p>
+      <input type="text" id="search-query" placeholder="Search by tag number or description..." onkeyup="searchLuggage()" class="search-input">
+      <ul id="luggage-list" class="items-list"></ul>
+    </section>
+
+    <!-- QR Code Section -->
+    <section id="qr-code-section">
+      <h2>Generate QR Code</h2>
+      <p class="section-description">Get a unique QR code for your luggage to enable easy tracking.</p>
+      <button onclick="generateQRCode()" class="qr-btn">Generate QR Code</button>
+      <img id="qr-code-img" src="" alt="QR Code" style="display:none;">
+    </section>
+
+    <!-- Notifications Section -->
+    <section id="email-notification">
+      <h2>Email Notification</h2>
+      <p class="section-description">Receive updates via email when a match for your luggage is found.</p>
+      <button onclick="sendEmailNotification()" class="notify-btn">Send Notification</button>
+      <div class="email-response-message" id="email-response"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Airport Lost Luggage Tracker. All rights reserved.</p>
+  </footer>
+
+  <script src="Hackathon Lost and Found/scripts/script.js"></script>
+</body>
+</html>

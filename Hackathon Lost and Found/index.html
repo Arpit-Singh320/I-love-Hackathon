@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost and Found DApp</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Lost and Found DApp</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#report-item">Report Item</a>
+        <a href="#search-item">Search Items</a>
+        <a href="#qr-code-section">QR Code</a>
+        <a href="#email-notification">Notifications</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h2>Your Trusted Decentralized Lost and Found Platform</h2>
+        <p>Report, find, and recover lost items globally using blockchain and AI.</p>
+        <a href="#report-item" class="cta-button">Report a Lost Item</a>
+      </div>
+    </section>
+
+    <section id="report-item">
+      <h2>Report Lost or Found Item</h2>
+      <p class="section-description">Help others by reporting lost or found items on this decentralized network.</p>
+      <form id="item-form" class="form">
+        <label for="item-description">Item Description:</label>
+        <input type="text" id="item-description" required>
+
+        <label for="item-image">Item Image URL:</label>
+        <input type="text" id="item-image" required>
+
+        <button type="submit" class="submit-btn">Report Item</button>
+      </form>
+      <div class="response-message" id="report-response"></div>
+    </section>
+
+    <section id="search-item">
+      <h2>Search for Lost Items</h2>
+      <p class="section-description">Find the lost items by searching their descriptions.</p>
+      <input type="text" id="search-query" placeholder="Search by description..." onkeyup="searchItems()" class="search-input">
+      <ul id="items-list" class="items-list"></ul>
+    </section>
+
+    <section id="qr-code-section">
+      <h2>Generate QR Code for Reported Item</h2>
+      <p class="section-description">Generate a unique QR code for reported items, which can be scanned to view details.</p>
+      <button onclick="generateQRCode()" class="qr-btn">Generate QR Code</button>
+      <img id="qr-code-img" src="" alt="QR Code" style="display:none;">
+    </section>
+
+    <section id="email-notification">
+      <h2>Email Notification</h2>
+      <p class="section-description">Notify the owner when a matching item is found.</p>
+      <button onclick="sendEmailNotification()" class="notify-btn">Send Match Found Notification</button>
+      <div class="email-response-message" id="email-response"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Lost and Found DApp. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

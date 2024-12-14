@@ -1,0 +1,203 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #343a40;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #17a2b8;
+}
+
+main {
+  padding: 3rem 2rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .cta-button {
+  background-color: #28a745;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+}
+
+.hero .cta-button:hover {
+  background-color: #218838;
+}
+
+/* Form Section */
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form input {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.response-message {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Items List Section */
+.items-list {
+  list-style-type: none;
+}
+
+.items-list li {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* QR Code Section */
+.qr-btn {
+  background-color: #ff7f50;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qr-btn:hover {
+  background-color: #e76f39;
+}
+
+#qr-code-img {
+  margin-top: 1rem;
+  max-width: 150px;
+}
+
+/* Email Notification Section */
+.notify-btn {
+  background-color: #ffc107;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notify-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .form {
+    width: 90%;
+  }
+}
+
+/* Enhanced Hero Section */
+.hero {
+  padding: 5rem 2rem;
+  background: linear-gradient(45deg, #007bff, #6610f2), url('https://via.placeholder.com/1920x500');
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
